@@ -147,33 +147,21 @@ var mainCon = new Vue({
         },
         getMessage:function (channel,text) {
             var _this=this;
-            this.$http.get("http://www.tuling123.com/openapi/api",{params:{
-                //key:'a36d982dfa44a487c74fefff41080c',
-                info:text,
-                userid:"123456"
-            }}).then(function (response) {
-
-                var data=response.body;
-                switch(flag){
-                case 1:data.text="第一个";break;
-                case 2:data.text="dierge";break;
-
-                default:
+           var datatext
                 var pre0="<a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=1,appendText()' >1.快递问题  </a><br> <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=2,appendText()'>2.网络贷款问题</a> <br> <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=3,appendText()' >3.手机软件扣费  </a><br>  <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=4,appendText()' >4.医疗问题 </a><br> <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=5,appendText()' >5.商标或关键词侵权问题 </a><br> <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=6,appendText()' >6.网络购物问题</a><br><a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=7,appendText()' >7.投资理财被诈骗问题</a><br> <a href='javascript:;' class='res-link' target='_blank' onclick='flagg_=8,appendText()' >8. 发票问题</a><br>" 
 
                // data.text="xxx   <a href='javascript:;' class='res-link' target='_blank' onclick='appendText()'  class='ui-sendBtn' @keyup.enter='send' @click='send'>打开页页面</a>  <a href='javasript:;' onclick=''>shishi</a>"
-               data.text=pre0
+               datatext=pre0
 
 
-                }
-                if(data.text){
-                    _this.receiveMessage(data.text,_this.channel)
+             
+            _this.receiveMessage(datatext,_this.channel)
                   //  console.log(_this.channel)
 
-                }
+              
                 saveChannel=_this.channel
                 console.log(saveChannel)
-            })
+            
         },
         
         scrollFooter:function () {
