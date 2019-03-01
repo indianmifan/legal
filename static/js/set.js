@@ -18,12 +18,8 @@ var pre3="您好，对您的遭遇表示遗憾，根据您的描述，我有以�
 
 function appendText()
 {
-    var txt1="<p>文本。</p>";              // 使用 HTML 标签创建文本
-    var txt2=$("<p></p>").text("文本。");  // 使用 jQuery 创建文本
-    var txt3=document.createElement("p");
-    txt3.innerHTML="文本。";               // 使用 DOM 创建文本 text with DOM
-   var a_= $(".ui-thread-item ");        // 追加新元素
- // a_.after(txt1,txt2,txt3)
+
+   
  	switch(flagg_)
  	{
 
